@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    height: 600px;
+    display: flex;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%); background-blend-mode: screen;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container__up {
+    width: 100%;
+    padding: 30px 30px 0px;
+}
+
+.container__down {
+    width: 100%;
+    padding: 0px 30px 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container__down p {
+    font-size: 14px;
+}
+
+.container__title {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.container__title h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #29323c;
+}
+
+.container__newtask {
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-task {
+    width: 100%;
+    height: 40px;
+    background: #929EAD;
+    color: #29323c;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 0px 15px;
+}
+
+#add-task {
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    color: #29323c;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    transition: all ease 0.2s
+}
+
+#add-task:hover {
+    opacity: 0.5;   
+}
+
+.container__tasks {
+    width: 100%;
+    height: 420px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    scrollbar-width: 1px;
+}
+
+.container__tasks::-webkit-scrollbar {
+    display: none;
+}
+
+.task {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    padding: 10px;
+    background-color: #29323c;
+    border-radius: 8px;
+}
+
+.task__left {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.task__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 40px;
+
+}
+
+.task-input {
+    width: 85%;
+    height: 40px;
+    background-color: transparent;
+    color: #e4e8ec;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+.fa-circle-check {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #485563;
+    transition: all ease 0.2s;
+}
+
+.fa-circle-check:hover {
+    color: #47df56;
+    cursor: pointer;
+}
+
+.fa-rotate-right {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #88949e;
+    transition: all ease 0.2s;
+}
+
+.fa-rotate-right:hover {
+    color: #4789df;
+    cursor: pointer;
+}
+
+.fa-pen {
+    color: #485563;
+    transition: all ease 0.2s
+}
+
+.fa-pen:hover {
+    color: #d5df47;
+    cursor: pointer;
+}
+
+.fa-trash {
+    color: #485563;
+    margin-left: 10px;
+    transition: all ease 0.2s
+}
+
+.fa-trash:hover {
+    color: #df4747;
+    cursor: pointer;
+}
+
+.container__tasks h2 {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #29323c;
+    font-weight: 500;
+}
+
+.fa-arrow-turn-down {
+    rotate: 90deg;
+    color: white;
+    margin-right: 2px;
+    transition: all ease 0.2s
+}
+
+/* TASK DONE */
+
+.task-done {
+    background-color: #a9b5c0;
+}
+
+.task-done .task-input {
+    color: #88949e;
+    text-decoration: line-through;
+}
+
+.task-done .fa-circle-check {
+    color: #88949e;
+}
+
+.task-done .fa-pen {
+    color: #88949e;
+}
+
+.task-done .fa-pen:hover {
+    color: #d5df47;
+}
+
+.task-done .fa-trash {
+    color: #88949e;
+}
+
+.task-done .fa-trash:hover {
+    color: #df4747;
+}

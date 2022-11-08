@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__up">
+            <div class="container__title">
+                <h1>ToDo List</h1>
+            </div>
+            <div class="container__newtask">
+                <input type="text" id="new-task" autofocus>
+                <button id="add-task">Add task</button>
+            </div>
+            <div class="container__tasks">
+                <!-- taskList -->
+            </div>
+        </div>
+        <div class="container__down">
+            <div id="task-count"></div>
+        </div>
+    </div>
+
+    <template id="template">
+        <div class="task">
+            <div class="task__left">
+                <i class="fa-solid fa-circle-check check"></i>
+                <input class="task-input" type="text" value="" readonly>
+            </div>
+            <div class="task__right">
+                <i class="fa-solid fa-pen edit"></i>
+                <i class="fa-solid fa-trash"></i>
+            </div>
+        </div>
+    </template>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
